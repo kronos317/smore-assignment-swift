@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+        <array key="NunitoSans-SemiBold.ttf">
+            <string>NunitoSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell.Chat.MessageMyPhoto" rowHeight="244" id="FhX-03-xWw" customClass="MessageMyPhotoTableViewCell" customModule="SMoreTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="244"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FhX-03-xWw" id="Bc0-da-U1g">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="244"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awU-nw-lqt" userLabel="View - Message Panel">
+                        <rect key="frame" x="91.5" y="20" width="259.5" height="164"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-1" translatesAutoresizingMaskIntoConstraints="NO" id="kRM-Pg-smM" userLabel="Image View - Photo">
+                                <rect key="frame" x="0.0" y="0.0" width="259.5" height="164"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="appOrange"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kRM-Pg-smM" secondAttribute="bottom" id="gwm-jr-5ix"/>
+                            <constraint firstItem="kRM-Pg-smM" firstAttribute="top" secondItem="awU-nw-lqt" secondAttribute="top" id="sR1-Vo-JPU"/>
+                            <constraint firstAttribute="trailing" secondItem="kRM-Pg-smM" secondAttribute="trailing" id="vDW-CX-W5h"/>
+                            <constraint firstItem="kRM-Pg-smM" firstAttribute="leading" secondItem="awU-nw-lqt" secondAttribute="leading" id="yav-UE-cHn"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YQ-3u-dnV" userLabel="Button - Retry">
+                        <rect key="frame" x="213" y="196" width="138" height="28"/>
+                        <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="14"/>
+                        <state key="normal" title="Failed to send. Retry?">
+                            <color key="titleColor" name="appOrange"/>
+                        </state>
+                        <connections>
+                            <action selector="onButtonRetryClick:" destination="FhX-03-xWw" eventType="touchUpInside" id="998-se-ODG"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rG-Np-ThI" userLabel="Button - Timestamp">
+                        <rect key="frame" x="295" y="196" width="56" height="28"/>
+                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="13"/>
+                        <state key="normal" title="12:35 PM">
+                            <color key="titleColor" name="appBlue"/>
+                        </state>
+                        <connections>
+                            <action selector="onButtonRetryClick:" destination="FhX-03-xWw" eventType="touchUpInside" id="lIT-hm-QGS"/>
+                            <action selector="onButtonTimestampClick:" destination="FhX-03-xWw" eventType="touchUpInside" id="7qX-zJ-09u"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4rG-Np-ThI" firstAttribute="top" secondItem="awU-nw-lqt" secondAttribute="bottom" constant="12" id="3I0-Do-ETy"/>
+                    <constraint firstItem="8YQ-3u-dnV" firstAttribute="centerY" secondItem="4rG-Np-ThI" secondAttribute="centerY" id="5ad-yQ-yCq"/>
+                    <constraint firstItem="awU-nw-lqt" firstAttribute="width" secondItem="Bc0-da-U1g" secondAttribute="width" multiplier="0.7" id="7bN-uq-4Om"/>
+                    <constraint firstAttribute="trailing" secondItem="awU-nw-lqt" secondAttribute="trailing" constant="20" id="Lhq-Ir-43t"/>
+                    <constraint firstItem="awU-nw-lqt" firstAttribute="top" secondItem="Bc0-da-U1g" secondAttribute="top" constant="20" id="k6v-Hg-Bhj"/>
+                    <constraint firstItem="8YQ-3u-dnV" firstAttribute="trailing" secondItem="4rG-Np-ThI" secondAttribute="trailing" id="qw6-XQ-Ra8"/>
+                    <constraint firstAttribute="trailing" secondItem="4rG-Np-ThI" secondAttribute="trailing" constant="20" id="sB8-Tt-FkU"/>
+                    <constraint firstAttribute="bottom" secondItem="4rG-Np-ThI" secondAttribute="bottom" constant="20" id="t8Q-z3-kCs"/>
+                    <constraint firstItem="8YQ-3u-dnV" firstAttribute="height" secondItem="4rG-Np-ThI" secondAttribute="height" id="zUq-hg-m4n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="buttonRetry" destination="8YQ-3u-dnV" id="pnc-46-dE5"/>
+                <outlet property="buttonTimestamp" destination="4rG-Np-ThI" id="Mi7-7x-1V2"/>
+                <outlet property="imageviewPhoto" destination="kRM-Pg-smM" id="LbO-Zy-3BE"/>
+                <outlet property="viewMessagePanel" destination="awU-nw-lqt" id="3J8-Lp-IYR"/>
+            </connections>
+            <point key="canvasLocation" x="-438.40579710144931" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="image-1" width="700" height="525"/>
+        <namedColor name="appBlue">
+            <color red="0.11372549019607843" green="0.13725490196078433" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appOrange">
+            <color red="0.9137254901960784" green="0.27843137254901962" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

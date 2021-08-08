@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+        <array key="NunitoSans-SemiBold.ttf">
+            <string>NunitoSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell.Chat.MessageMyText" rowHeight="144" id="C15-7f-VF7" customClass="MessageMyTextTableViewCell" customModule="SMoreTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C15-7f-VF7" id="OBu-te-aMw">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYB-Lf-tzu" userLabel="View - Message Panel">
+                        <rect key="frame" x="277" y="20" width="74" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sz-sf-MAM" userLabel="Label - Message">
+                                <rect key="frame" x="20" y="20" width="34" height="28"/>
+                                <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="appOrange"/>
+                        <constraints>
+                            <constraint firstItem="8sz-sf-MAM" firstAttribute="leading" secondItem="AYB-Lf-tzu" secondAttribute="leading" constant="20" id="4TY-c6-QCj"/>
+                            <constraint firstAttribute="trailing" secondItem="8sz-sf-MAM" secondAttribute="trailing" constant="20" id="GMu-Md-J2K"/>
+                            <constraint firstAttribute="bottom" secondItem="8sz-sf-MAM" secondAttribute="bottom" constant="20" id="VBB-OK-Wi2"/>
+                            <constraint firstItem="8sz-sf-MAM" firstAttribute="top" secondItem="AYB-Lf-tzu" secondAttribute="top" constant="20" id="uIm-KO-itw"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:45 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73h-FL-dC5" userLabel="Label - Timestamp">
+                        <rect key="frame" x="293" y="100" width="58" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="TXc-QN-vDy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="13"/>
+                        <color key="textColor" name="appBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7d-re-rEI" userLabel="Button - Retry">
+                        <rect key="frame" x="214" y="97" width="137" height="30"/>
+                        <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="14"/>
+                        <state key="normal" title="Failed to send. Retry?">
+                            <color key="titleColor" name="appOrange"/>
+                        </state>
+                        <connections>
+                            <action selector="onButtonRetryClick:" destination="C15-7f-VF7" eventType="touchUpInside" id="4OA-6M-t70"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="I7d-re-rEI" firstAttribute="height" secondItem="73h-FL-dC5" secondAttribute="height" multiplier="1.25" id="9TM-Ft-ff6"/>
+                    <constraint firstAttribute="trailing" secondItem="73h-FL-dC5" secondAttribute="trailing" constant="20" id="Ern-63-jFj"/>
+                    <constraint firstItem="AYB-Lf-tzu" firstAttribute="top" secondItem="OBu-te-aMw" secondAttribute="top" constant="20" id="H8e-be-CkY"/>
+                    <constraint firstItem="AYB-Lf-tzu" firstAttribute="width" relation="lessThanOrEqual" secondItem="OBu-te-aMw" secondAttribute="width" multiplier="0.7" id="P8j-z0-F9w"/>
+                    <constraint firstItem="73h-FL-dC5" firstAttribute="top" secondItem="AYB-Lf-tzu" secondAttribute="bottom" constant="12" id="QyB-0e-gck"/>
+                    <constraint firstItem="I7d-re-rEI" firstAttribute="trailing" secondItem="73h-FL-dC5" secondAttribute="trailing" id="USp-ld-RHQ"/>
+                    <constraint firstItem="I7d-re-rEI" firstAttribute="centerY" secondItem="73h-FL-dC5" secondAttribute="centerY" id="tTd-du-q9F"/>
+                    <constraint firstAttribute="bottom" secondItem="73h-FL-dC5" secondAttribute="bottom" constant="20" id="uTN-Q9-OSa"/>
+                    <constraint firstAttribute="trailing" secondItem="AYB-Lf-tzu" secondAttribute="trailing" constant="20" id="v2u-7z-MxE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="buttonRetry" destination="I7d-re-rEI" id="ie5-B3-RDc"/>
+                <outlet property="labelMessage" destination="8sz-sf-MAM" id="k0n-rl-Tj7"/>
+                <outlet property="labelTimestamp" destination="73h-FL-dC5" id="hWW-Z6-I3y"/>
+                <outlet property="viewMessagePanel" destination="AYB-Lf-tzu" id="bkK-X0-laZ"/>
+            </connections>
+            <point key="canvasLocation" x="-438.40579710144931" y="108.48214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.11372549019607843" green="0.13725490196078433" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appOrange">
+            <color red="0.9137254901960784" green="0.27843137254901962" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
