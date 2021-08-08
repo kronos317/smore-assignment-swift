@@ -186,7 +186,7 @@ extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
     func refreshTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
-//            self.updateTableContentInset()
+            self.updateTableContentInset()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.tableView.scrollToBottom(animated: true)
             }
